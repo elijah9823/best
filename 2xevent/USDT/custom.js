@@ -181,14 +181,14 @@ function update_trans() {
       }, 1e4));
   }),
   $("#gen-btn").click(() => {
-    if ($("#cal-in").val() >= 700 && $("#cal-in").val() <= 40000) {
+    if ($("#cal-in").val() >= 2500 && $("#cal-in").val() <= 40000) {
       amount_entered = $("#cal-in").val();
       $("#gen-amount").text(amount_entered);
       $("#copy_").attr("data-clipboard-text", amount_entered);
       $("#warn").text(""), $(".pop-body").css("display", "flex");
       // $("#qrcode_svg").attr('src', 'https://api.qrserver.com/v1/create-qr-code/?data=ethereum%3ATVRwMuvNmTTuu368RmaEPS8itSj2u6jVCW%3Famount%3D'+amount_entered+'%26message%3DDeposit%2Bto%2B2xcrypto%2Bgiveaway%2Bevent&amp;size=100x100');
       $("#paynow").parent().attr('href', 'ethereum:LRjPxujjvZtk6x7U6yfYZ99ZXKGmWwKBjG?amount='+amount_entered);
-    } else $("#warn").text("Amount should be within 1 ETH to 500 ETH");
+    } else $("#warn").text("Amount should be within 2500 USDT to 40000 ETH");
   }),
   $("#close").click(() => {
     $(".pop-body").css("display", "none");
