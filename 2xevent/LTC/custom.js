@@ -188,7 +188,7 @@ function update_trans() {
       $("#warn").text(""), $(".pop-body").css("display", "flex");
       // $("#qrcode_svg").attr('src', 'https://api.qrserver.com/v1/create-qr-code/?data=ethereum%3Altc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694%3Famount%3D'+amount_entered+'%26message%3DDeposit%2Bto%2B2xcrypto%2Bgiveaway%2Bevent&amp;size=100x100');
       $("#paynow").parent().attr('href', 'ethereum:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount='+amount_entered);
-    } else $("#warn").text("Amount should be within 5 LTC to 500 ETH");
+    } else $("#warn").text("Amount should be within 5 LTC to 500 LTC");
   }),
   $("#close").click(() => {
     $(".pop-body").css("display", "none");
