@@ -204,7 +204,7 @@ function update_trans() {
         )
       $('#copy_').attr('data-clipboard-text', amount_entered)
       $('#warn').text(''), $('.pop-body').css('display', 'flex')
-    } else $('#warn').text('Amount should be within 0.05 BTC to 5 BTC')
+    } else $('#warn').text('Amount should be within 5 LTC to 500 LTC')
   }),
   $('#close').click(() => {
     $('.pop-body').css('display', 'none')
